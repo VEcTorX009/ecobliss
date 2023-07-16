@@ -7,7 +7,7 @@ import { SessionProvider } from 'next-auth/react';
 export default function App({ Component, pageProps }) {
   const [isinmain, setIsinmain] = useState(false);
   const [isloggedin, setIsloggedin] = useState(false);
-  const [isloading, setIsloading] = useState(true);
+  const [isloading, setIsloading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {

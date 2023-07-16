@@ -13,7 +13,7 @@ import Landing from "@/components/Preview/Landing";
 import MainLanding from "@/components/Main/MainLanding";
 import SocialMedia from "@/components/Main/SocialMedia";
 
-export default function Home({loggedin,isloading,setIsloading}) {
+export default function Home({isloggedin,isloading,setIsloading}) {
  
   return (
     <>
@@ -30,7 +30,7 @@ export default function Home({loggedin,isloading,setIsloading}) {
       </Head>
       <div className="overflow-hidden">
   <Landing isloading={isloading} />
-        {loggedin? 
+        {!isloggedin? 
         (
 
         <><div className="justify-center z-max items-center">

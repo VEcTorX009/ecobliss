@@ -33,7 +33,7 @@ export default function Home({loggedin,isloading,setIsloading}) {
         {loggedin? 
         (
 
-        <><div className="justify-center items-center">
+        <><div className="justify-center z-max items-center">
               <Hero />
             </div><Body /><Body2 /><About /><Aboutus /><Review /><Banner /><Footer /></>
         ):(<>

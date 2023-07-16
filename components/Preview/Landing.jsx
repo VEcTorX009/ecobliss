@@ -18,34 +18,23 @@ export default function Landing({isloading}) {
           }, 3000);
         };
 
-    }
-    else{
-      if (status === "authenticated") {
-        setTimeout(() => {
-          handleclick()
-          
-        }, 4500);
       }
-      function handleclick  ()  {
-        document.getElementById("previewlanding").classList.add("goupbro");
-          setTimeout(() => {
-            document.getElementById("previewlanding").style.display="none";
-            
-          }, 5000);
-        };
-    }
+    
   }, [status]);
   const handleclick = ()=>{
-    if (isloading===false && status === "authenticated") {
+    if (status === "authenticated") {
+      document.getElementById("previewlanding").classList.add("goupbro");
+      setTimeout(() => {
+        document.getElementById("previewlanding").style.display="none";
+      }, 3000);
     }
     else{
 
       document.getElementById("previewlanding").classList.add("goupbro");
-      document.getElementById("popup").classList.add("popup");
-      document.getElementById("popup2").classList.add("popup");
+      // document.getElementById("popup").classList.add("popup");
+      // document.getElementById("popup2").classList.add("popup");
       setTimeout(() => {
         document.getElementById("previewlanding").style.display="none";
-        
       }, 3000);
     }
 
@@ -60,7 +49,7 @@ export default function Landing({isloading}) {
         </div>
         <div className="flex flex-col mt-5">
           <button
-            onClick={handleclick}
+            onClick={isloading? "":handleclick}
             className="px-[4vw] bg-[#F4E9DD] rounded-full py-[0.7vw]"
           >
             <h2 className="text-[#646464] text-2xl">{isloading? "Loading" : "Yes I am"}</h2>

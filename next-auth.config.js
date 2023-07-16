@@ -1,6 +1,8 @@
+import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
-
-const options = {
+const secret = "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"
+export const authOptions = {
+  secret: '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', // Add your generated secret here
   providers: [
     GoogleProvider({
       clientId: '570663835166-duov3be3rsb45rsheunvttaei1nbk8fb.apps.googleusercontent.com',
@@ -12,4 +14,4 @@ const options = {
   },
 };
 
-export default options;
+export default NextAuth(authOptions);
